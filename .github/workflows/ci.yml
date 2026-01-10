@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  styles:
+  Style:
     name: Formatting
     runs-on: ubuntu-latest
 
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: "1.25.1"
-          
+
       - name: Check Go Formatting
         run: test -z $(go fmt ./...)
 
