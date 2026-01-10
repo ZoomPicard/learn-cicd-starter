@@ -37,7 +37,7 @@ func TestNoAuthHeader(t *testing.T) {
 func TestMalformedAuthHeader(t *testing.T) {
 	testHeader := http.Header{"Authorization": {"DifferentAuth"}}
 	_, err := GetAPIKey(testHeader)
-	if err.Error() != "malformed authorization heade" {
+	if err.Error() != "malformed authorization header" {
 		t.Fatal("Did not get the expected malformed authorization header error")
 	}
 }
